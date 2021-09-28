@@ -1,5 +1,5 @@
 
-function newItem(){
+function newItem() {
 
 //1. Adding a new item to the list of items:
 
@@ -32,11 +32,21 @@ function newItem(){
 
 
  //2. Crossing out an item from the list of items:
-   function crossOut() {
+
+ //JavaScript:
+
+/*   function crossOut() {
  		li.classList.toggle("strike");
  	}
 
  	li.addEventListener("dblclick",crossOut);
+*/
+
+//jQuery:
+
+li.on("dblclick", function() {
+  li.toggleClass("strike");
+});
 
  //3(i). Adding the delete button "X":
    let crossOutButton = document.createElement("crossOutButton");
